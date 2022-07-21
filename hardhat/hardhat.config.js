@@ -1,5 +1,7 @@
 require("@nomiclabs/hardhat-waffle");
-require("dotenv").config({ path: ".env" });
+require("path");
+require("dotenv").config({ path: path.join(__dirname, ".env") });
+
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 const RPC_URL = process.env.RPC_URL;
 if (!PRIVATE_KEY) {
@@ -8,6 +10,7 @@ if (!PRIVATE_KEY) {
 if (!RPC_URL) {
   console.error("Missing RPC_URL environment variable");
 }
+
 module.exports = {
   solidity: "0.8.7",
   networks: {
