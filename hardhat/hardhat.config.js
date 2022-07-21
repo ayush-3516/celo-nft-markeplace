@@ -1,5 +1,5 @@
 require("@nomiclabs/hardhat-waffle");
-require("dotenv").config({ path: "/.env" });
+require("dotenv").config({ path: ".env" });
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 const RPC_URL = process.env.RPC_URL;
 if (!PRIVATE_KEY) {
